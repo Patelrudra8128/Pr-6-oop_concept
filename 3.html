@@ -1,0 +1,21 @@
+<script type="text/javascript">
+    var no = parseInt(prompt("Enter any Number : "));
+
+    class table {
+        constructor(no) {
+            this.num = no;
+        }
+
+        mtable() {
+            var i = 1;
+            do{
+                document.write("<p>"+this.num+" * "+i+" = "+(i*this.num)+"</p>");
+                i++;
+            }while(i<=10);
+        }
+    }
+
+    var multi = new table(no);
+    multi.mtable();
+    
+</script>

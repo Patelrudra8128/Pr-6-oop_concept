@@ -1,0 +1,48 @@
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    <tbody id="record"></tbody>
+</table>
+<script type="text/javascript">
+    const data = [
+        {
+            name : "",
+            email : "",
+            phone : ""
+        },
+    ]
+    var tbl = "";
+
+    class demo {
+        constructor(name,email,phone){
+            this.n = name;
+            this.e = email;
+            this.p = phone;
+        }
+
+        showdata() {
+            data.map((val) => {
+                tbl += `
+                            <tr>
+                                <td>${this.n}</td>    
+                                <td>${this.e}</td>    
+                                <td>${this.p}</td>    
+                            </tr>
+                        `
+            });
+            document.getElementById('record').innerHTML = tbl;
+        }
+    }
+
+    var obj1 = new demo("jay","jay@gmail.com",12345);
+    obj1.showdata();
+    var obj2 = new demo("ajay","ajay@gmail.com",12345);
+    obj2.showdata();
+    var obj3 = new demo("vijay","vijay@gmail.com",12345);
+    obj3.showdata();
+    var obj4 = new demo("ashish","ashish@gmail.com",12345);
+    obj4.showdata();
+</script>
